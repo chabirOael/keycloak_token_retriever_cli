@@ -158,6 +158,10 @@ def _exchange_code(code: str, code_verifier: str) -> str:
 
 
 def main() -> None:
+    print("=" * 50, file=sys.stderr)
+    print("🔑 Keycloak Token Retriever CLI 🔑".center(50), file=sys.stderr)
+    print("=" * 50, file=sys.stderr)
+    
     _validate_config()
 
     state = secrets.token_urlsafe(16)
